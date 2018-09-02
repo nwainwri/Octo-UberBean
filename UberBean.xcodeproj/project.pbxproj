@@ -13,6 +13,7 @@
 		F13666CE213BBF0100426FB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F13666CD213BBF0100426FB9 /* Assets.xcassets */; };
 		F13666D1213BBF0100426FB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F13666CF213BBF0100426FB9 /* LaunchScreen.storyboard */; };
 		F13666D4213BBF0100426FB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F13666D3213BBF0100426FB9 /* main.m */; };
+		F151341C213C896A00511433 /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F151341B213C896A00511433 /* MyAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		F13666D0213BBF0100426FB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F13666D2213BBF0100426FB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F13666D3213BBF0100426FB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F151341A213C896A00511433 /* MyAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyAnnotation.h; sourceTree = "<group>"; };
+		F151341B213C896A00511433 /* MyAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				F13666C5213BBEFE00426FB9 /* AppDelegate.m */,
 				F13666C7213BBEFE00426FB9 /* ViewController.h */,
 				F13666C8213BBEFE00426FB9 /* ViewController.m */,
+				F151341A213C896A00511433 /* MyAnnotation.h */,
+				F151341B213C896A00511433 /* MyAnnotation.m */,
 				F13666CA213BBEFE00426FB9 /* Main.storyboard */,
 				F13666CD213BBF0100426FB9 /* Assets.xcassets */,
 				F13666CF213BBF0100426FB9 /* LaunchScreen.storyboard */,
@@ -143,6 +148,7 @@
 			files = (
 				F13666C9213BBEFE00426FB9 /* ViewController.m in Sources */,
 				F13666D4213BBF0100426FB9 /* main.m in Sources */,
+				F151341C213C896A00511433 /* MyAnnotation.m in Sources */,
 				F13666C6213BBEFE00426FB9 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
