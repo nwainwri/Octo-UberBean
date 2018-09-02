@@ -24,11 +24,10 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  // Do any additional setup after loading the view, typically from a nib.
+//  self.mapView.showsUserLocation = YES;
   
   
-  
-//  sets up location manager properly, setting desired accuuracy boundaries, distant, and settine delegate for it.
+  //  sets up location manager properly, setting desired accuuracy boundaries, distant, and settine delegate for it.
   self.locationManager = [[CLLocationManager alloc] init];
   self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
   self.locationManager.distanceFilter = 20;
@@ -37,19 +36,24 @@
   [self.locationManager requestWhenInUseAuthorization];
   
   //setups view to have a map, covering entire screen
+  MKMapView *mapView = [[MKMapView alloc] initWithFrame:self.view.frame];
+  [self.view addSubview:mapView];
   self.mapView.delegate = self;
   self.mapView.showsUserLocation = YES;
   self.mapView.showsPointsOfInterest = YES;
   self.mapView.mapType = MKMapTypeStandard; //MKMapTypeHybridFlyover;
   
-  [self.mapView registerClass:[MKMarkerAnnotationView class] forAnnotationViewWithReuseIdentifier:@"myAnnotation"];
+//  [self.mapView registerClass:[MKMarkerAnnotationView class] forAnnotationViewWithReuseIdentifier:@"myAnnotation"];
+//
+//  MyAnnotation *annotation = [[MyAnnotation alloc] init];
+//  annotation.title = @"Something weird here";
+//  annotation.subtitle = @"I dunno what";
+//  annotation.coordinate = CLLocationCoordinate2DMake(40.6892656, -74.0466891);
+//
+//  [self.mapView addAnnotation:annotation];
   
-  MyAnnotation *annotation = [[MyAnnotation alloc] init];
-  annotation.title = @"Something weird here";
-  annotation.subtitle = @"I dunno what";
-  annotation.coordinate = CLLocationCoordinate2DMake(40.6892656, -74.0466891);
-  
-  [self.mapView addAnnotation:annotation];
+  // got an ERROR: 2018-09-02 14:54:42.619316-0700 UberBean[1088:33226] **** Manager failed: The operation couldn’t be completed. (kCLErrorDomain error 0.)
+
   
 }
 
