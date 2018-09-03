@@ -12,6 +12,7 @@
 @import CoreLocation;
 @import MapKit;
 #import "MyAnnotation.h"
+#import "NetworkManager.h"
 
 @interface ViewController () <CLLocationManagerDelegate,MKMapViewDelegate>
 
@@ -32,7 +33,13 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  //  self.mapView.showsUserLocation = YES;
+
+  // init networkmanager and do initial data pull from Yelp
+  NetworkManager *networkManager = [[NetworkManager alloc] init];
+  [networkManager getDataFromUrlAndParse];
+  
+  
+  NSLog(@"CAFE TEST FIRST:: %@", networkManager.dictionary);
   
   //  sets up location manager properly, setting desired accuuracy boundaries, distant, and settine delegate for it.
   self.locationManager = [[CLLocationManager alloc] init];
@@ -68,10 +75,9 @@
   //  annotation.coordinate = CLLocationCoordinate2DMake(40.6892656, -74.0466891);
   //
   //  [self.mapView addAnnotation:annotation];
-  
-  // got an ERROR: 2018-09-02 14:54:42.619316-0700 UberBean[1088:33226] **** Manager failed: The operation couldn’t be completed. (kCLErrorDomain error 0.)
-  
-  
+    
+  NSLog(@"CAFE TEST SECOND:: %@", networkManager.dictionary);
+
 }
 
 // MARK: - CLLocationManagerDelegate

@@ -15,6 +15,8 @@
 		F13666D4213BBF0100426FB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F13666D3213BBF0100426FB9 /* main.m */; };
 		F151341C213C896A00511433 /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F151341B213C896A00511433 /* MyAnnotation.m */; };
 		F1E78AB5213C954200E65850 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E78AB4213C954200E65850 /* MapKit.framework */; };
+		F1E78AB8213CC55200E65850 /* Cafe.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E78AB7213CC55200E65850 /* Cafe.m */; };
+		F1E78ABB213CCAD400E65850 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E78ABA213CCAD400E65850 /* NetworkManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,10 @@
 		F151341A213C896A00511433 /* MyAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyAnnotation.h; sourceTree = "<group>"; };
 		F151341B213C896A00511433 /* MyAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
 		F1E78AB4213C954200E65850 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F1E78AB6213CC55200E65850 /* Cafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cafe.h; sourceTree = "<group>"; };
+		F1E78AB7213CC55200E65850 /* Cafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cafe.m; sourceTree = "<group>"; };
+		F1E78AB9213CCAD400E65850 /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		F1E78ABA213CCAD400E65850 /* NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,10 @@
 				F13666C8213BBEFE00426FB9 /* ViewController.m */,
 				F151341A213C896A00511433 /* MyAnnotation.h */,
 				F151341B213C896A00511433 /* MyAnnotation.m */,
+				F1E78AB6213CC55200E65850 /* Cafe.h */,
+				F1E78AB7213CC55200E65850 /* Cafe.m */,
+				F1E78AB9213CCAD400E65850 /* NetworkManager.h */,
+				F1E78ABA213CCAD400E65850 /* NetworkManager.m */,
 				F13666CA213BBEFE00426FB9 /* Main.storyboard */,
 				F13666CD213BBF0100426FB9 /* Assets.xcassets */,
 				F13666CF213BBF0100426FB9 /* LaunchScreen.storyboard */,
@@ -158,9 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1E78AB8213CC55200E65850 /* Cafe.m in Sources */,
 				F13666C9213BBEFE00426FB9 /* ViewController.m in Sources */,
 				F13666D4213BBF0100426FB9 /* main.m in Sources */,
 				F151341C213C896A00511433 /* MyAnnotation.m in Sources */,
+				F1E78ABB213CCAD400E65850 /* NetworkManager.m in Sources */,
 				F13666C6213BBEFE00426FB9 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
