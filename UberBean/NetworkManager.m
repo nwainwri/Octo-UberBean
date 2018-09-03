@@ -17,34 +17,34 @@
 
 
 @implementation NetworkManager
-float latitude = 49.2812;
-float longitude = -123.1170317;
+
 
 
 
 - (void)getDataFromUrlAndParse {
+  self.cafeArray = [[NSMutableArray alloc] init];
+  
+  float latitude = 49.2812;
+  float longitude = -123.1170317;
   
   // 1
   NSString *dataUrl = [NSString stringWithFormat:@"https://api.yelp.com/v3/businesses/search?term=cafe&latitude=%f&longitude=%f", latitude, longitude];
   NSURL *url = [NSURL URLWithString:dataUrl];
   
   NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:url]; // 2
-  [urlRequest addValue:@"Bearer -orWKEHfVmwcWFoxveGWcL6nKQF5Pdf2sFf2GyRfvQMbK9aFG0-bM3esET24G_UrfMlI0kd4n_WMT7Q_o2mXdyAU7mcaqbbuIYgAsrWHW_M3jhzLurQdiAbsUMIWMW3Yx" forHTTPHeaderField:@"Authorization"];
-//
+  [urlRequest addValue:@"Bearer orWKEHfVmwcWFoxveGWcL6nKQF5Pdf2sFf2GyRfvQMbK9aFG0-bM3esET24G_UrfMlI0kd4n_WMT7Q_o2mXdyAU7mcaqbbuIYgAsrWHW_M3jhzLurQdiAbsUMIWMW3Yx" forHTTPHeaderField:@"Authorization"];
+  
+  // [urlRequest addValue:@"Bearer your_api_key" forHTTPHeaderField:@"Authorization"];
+
+  //
   NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration]; // 3
-  NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration]; // what is this used for...???
+  NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration]; //
   //MARK: is above line needed?
   
-  
-  
-  
-  
-  
   // 2
-  NSURLSessionDataTask *downloadTask = [[NSURLSession sharedSession]
-                                        dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+  NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:urlRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+//    NSURLSessionDataTask *downloadTask = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
                                           // 4: Handle response here
-                                          
                                           if (error) { // 1
                                             // Handle the error
                                             NSLog(@"error: %@", error.localizedDescription);
@@ -70,17 +70,15 @@ float longitude = -123.1170317;
                                             NSLog(@"CAFE NAME: %@", cafe.placeName);
                                           }
                                           [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                                            //  [self.UITableView reloadData];
+//                                              [self.UITableView reloadData];
+                                            
+                                            
                                           }];
-                                          
-                                          
-                                          
-                                          
                                         }];
   
   // 3
-  [downloadTask resume];
-//  NSLog(@"CAFE MASS PRINT: %@", self.cafeArray);
+  [dataTask resume];
+  //  NSLog(@"CAFE MASS PRINT: %@", self.cafeArray);
   
   
 }
